@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad9159d9a9947c7aa1bf0f20b219d76, type: 3}
+  m_Name: Anvil
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Anvil
+  <Description>k__BackingField: 
+  <Type>k__BackingField: 1
+  <Icon>k__BackingField: {fileID: -1060740448181984941, guid: f3115e2c9b98b104d8e7dedfe25c1eba, type: 3}
