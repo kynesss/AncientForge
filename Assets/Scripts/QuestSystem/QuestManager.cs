@@ -8,12 +8,11 @@ namespace QuestSystem
     public class QuestManager : MonoBehaviour, IService
     {
         [SerializeField] private List<QuestData> questDatas;
-        
-        private readonly List<Quest> _activeQuests = new();
-
+        public List<Quest> ActiveQuests { get; } = new();
         public event QuestCompletedEvent QuestCompleted;
+        public event QuestUpdatedEvent QuestUpdated;
         
-        private void Start()
+        private void Awake()
         {
             InitializeQuests();
         }
@@ -27,28 +26,31 @@ namespace QuestSystem
         {
             Services.Inventory.InventoryChanged -= Inventory_OnInventoryChanged;
         }
-
+        
         private void InitializeQuests()
         {
             foreach (var questData in questDatas)
             {
-                _activeQuests.Add(new Quest(questData));
+                ActiveQuests.Add(new Quest(questData));
             }
         }
 
+        [ContextMenu("Update")]
         private void UpdateQuests()
         {
-            for (var i = _activeQuests.Count - 1; i >= 0; i--)
+            for (var i = ActiveQuests.Count - 1; i >= 0; i--)
             {
-                var quest = _activeQuests[i];
+                var quest = ActiveQuests[i];
                 quest.Update();
 
                 if (quest.IsCompleted)
                 {
                     QuestCompleted?.Invoke(quest.Data);
-                    _activeQuests.Remove(quest);
+                    ActiveQuests.Remove(quest);
                 }
             }
+            
+            QuestUpdated?.Invoke();
         }
 
         private void Inventory_OnInventoryChanged()

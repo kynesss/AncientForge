@@ -44,7 +44,8 @@ namespace InventorySystem
         
         public int GetItemQuantity(ItemData item)
         {
-            return Items.Count(x => x.Item == item);
+            var slot = Items.FirstOrDefault(x => x.Item == item);
+            return slot?.Quantity ?? 0;
         }
     }
 }

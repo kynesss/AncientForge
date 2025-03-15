@@ -1,4 +1,5 @@
 using Core;
+using UnityEngine;
 
 namespace QuestSystem
 {
@@ -18,6 +19,8 @@ namespace QuestSystem
         {
             var item = Data.RequiredItems.Item;
             CurrentAmount = Services.Inventory.GetItemQuantity(item);
+            
+            Debug.Log($"Quest: {Data.QuestName} {CurrentAmount} / {RequiredAmount}");
         }
     }
 }

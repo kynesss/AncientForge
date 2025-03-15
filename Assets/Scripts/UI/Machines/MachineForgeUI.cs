@@ -48,7 +48,7 @@ namespace UI.Machines
 
         public void Open(Machine machine)
         {
-            if (_currentMachine.IsProcessing)
+            if (machine.IsProcessing)
                 return;
             
             slotContainer.DestroyAllChildren();
