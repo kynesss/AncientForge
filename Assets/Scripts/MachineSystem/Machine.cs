@@ -38,6 +38,11 @@ namespace MachineSystem
             
             if (success)
             {
+                foreach (var inputItem in recipe.InputItems)
+                {
+                    Services.Inventory.RemoveItem(inputItem, 1);
+                }
+                
                 Services.Inventory.AddItem(recipe.OutputItem, 1);
                 Debug.Log($"Successfully crafted {recipe.OutputItem.Name}!");
             }
@@ -45,7 +50,7 @@ namespace MachineSystem
             {
                 Debug.Log($"Processing failed. Ingredients lost.");
             }
-
+            
             IsProcessing = false;
         }
     }
