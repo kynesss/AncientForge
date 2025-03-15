@@ -20,7 +20,7 @@ namespace UI.Inventory
         {
             Item = slot.Item;
             itemIcon.sprite = slot.Item.Icon;
-            quantityText.text = slot.Quantity > 1 ? $"{slot.Quantity}" : "";
+            quantityText.text = $"{slot.Quantity}";
         }
 
         public void OnBeginDrag(PointerEventData eventData)
