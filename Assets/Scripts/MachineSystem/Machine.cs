@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Core;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using InventorySystem;
 using Random = UnityEngine.Random;
 
 namespace MachineSystem
@@ -10,8 +10,6 @@ namespace MachineSystem
     public class Machine : MonoBehaviour
     {
         [field: SerializeField] public MachineData Data { get; private set; }
-        
-        [SerializeField] private Inventory inventory;
         public bool IsProcessing { get; private set; }
 
         public string GetMachineName()
@@ -38,7 +36,7 @@ namespace MachineSystem
             
             if (success)
             {
-                inventory.AddItem(recipe.OutputItem, 1);
+                Services.Inventory.AddItem(recipe.OutputItem, 1);
                 Debug.Log($"Successfully crafted {recipe.OutputItem.Name}!");
             }
             else

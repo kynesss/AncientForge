@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
+using Core;
 using MachineSystem;
 using TMPro;
 using UnityEngine;
@@ -21,7 +21,6 @@ namespace UI.Machines
         [SerializeField] private Button exitButton;
         
         [SerializeField] private TextMeshProUGUI machineTitle; 
-        [SerializeField] private InventorySystem.Inventory inventory;
 
         private readonly List<MachineSlotUI> _activeSlots = new();
 
@@ -88,7 +87,7 @@ namespace UI.Machines
             if (!isCorrect && slot.InsertedItem != null)
             {
                 Debug.Log("Returning invalid item to inventory.");
-                inventory.AddItem(slot.InsertedItem, 1);
+                Services.Inventory.AddItem(slot.InsertedItem, 1);
                 slot.ClearSlot();
             }
 
@@ -118,7 +117,7 @@ namespace UI.Machines
             {
                 if (slot.IsFilled)
                 {
-                    inventory.AddItem(slot.InsertedItem, 1);
+                    Services.Inventory.AddItem(slot.InsertedItem, 1);
                 }
             }
         }

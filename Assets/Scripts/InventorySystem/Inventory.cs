@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
+using Core;
 using InventorySystem.Events;
 using UnityEngine;
 
 namespace InventorySystem
 {
-    public class Inventory : MonoBehaviour
+    public class Inventory : MonoBehaviour, IService
     {
         public List<InventorySlot> Items { get; } =  new();
-
         public event InventoryChangedEvent InventoryChanged;
 
         public void AddItem(ItemData item, int quantity)
