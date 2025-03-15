@@ -14,5 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Anvil
   <Description>k__BackingField: 
-  <Type>k__BackingField: 1
   <Icon>k__BackingField: {fileID: -1060740448181984941, guid: f3115e2c9b98b104d8e7dedfe25c1eba, type: 3}
+  <ProcessTime>k__BackingField: 4
+  <SuccessChance>k__BackingField: 0.9
+  <Recipes>k__BackingField:
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 6d800434b8ce20544be1b5786515e95c, type: 2}
+    - {fileID: 11400000, guid: 6f8b6180ded37a046b4708ac5f6b184b, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: 4071d0c33a9aa2c48ae55c68d4cbbddd, type: 2}
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: b66189eac47444549ae6b39fa408bc5a, type: 2}
+    - {fileID: 11400000, guid: 6f8b6180ded37a046b4708ac5f6b184b, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: 8698472158413f247ae8d9dbc7a69b91, type: 2}

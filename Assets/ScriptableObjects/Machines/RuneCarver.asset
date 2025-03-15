@@ -14,5 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Rune Carver
   <Description>k__BackingField: 
-  <Type>k__BackingField: 3
   <Icon>k__BackingField: {fileID: -7692690932639535609, guid: 3ca4d2a514d5ecb4bb5a6a1d6019db2c, type: 3}
+  <ProcessTime>k__BackingField: 4
+  <SuccessChance>k__BackingField: 0.8
+  <Recipes>k__BackingField:
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 17ff514b006f1bc4fb619ee7acd040f8, type: 2}
+    - {fileID: 11400000, guid: 73d8bea73883b144fa52dac334f488be, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: 335ce635085af3c4fb1245a7957c972f, type: 2}
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 0cdc2901abcfd5440a2579bce7753112, type: 2}
+    - {fileID: 11400000, guid: 73d8bea73883b144fa52dac334f488be, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: 335ce635085af3c4fb1245a7957c972f, type: 2}

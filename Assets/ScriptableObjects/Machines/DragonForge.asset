@@ -14,5 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Dragon Forge
   <Description>k__BackingField: 
-  <Type>k__BackingField: 4
   <Icon>k__BackingField: {fileID: -3974293702141752974, guid: 722f8f4fe23b00446b427aaa5993cb7e, type: 3}
+  <ProcessTime>k__BackingField: 6
+  <SuccessChance>k__BackingField: 0.75
+  <Recipes>k__BackingField:
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 4071d0c33a9aa2c48ae55c68d4cbbddd, type: 2}
+    - {fileID: 11400000, guid: d162c8054284f134fa218c10b573a253, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: f607eb1ad41231e4e8352cdee3878aea, type: 2}
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 8698472158413f247ae8d9dbc7a69b91, type: 2}
+    - {fileID: 11400000, guid: d162c8054284f134fa218c10b573a253, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: f607eb1ad41231e4e8352cdee3878aea, type: 2}

@@ -14,5 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Enchanter
   <Description>k__BackingField: 
-  <Type>k__BackingField: 2
   <Icon>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  <ProcessTime>k__BackingField: 5
+  <SuccessChance>k__BackingField: 0.8
+  <Recipes>k__BackingField:
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 4071d0c33a9aa2c48ae55c68d4cbbddd, type: 2}
+    - {fileID: 11400000, guid: 73d8bea73883b144fa52dac334f488be, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: 17ff514b006f1bc4fb619ee7acd040f8, type: 2}
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 8698472158413f247ae8d9dbc7a69b91, type: 2}
+    - {fileID: 11400000, guid: 73d8bea73883b144fa52dac334f488be, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: 0cdc2901abcfd5440a2579bce7753112, type: 2}
