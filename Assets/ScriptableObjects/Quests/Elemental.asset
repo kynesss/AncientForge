@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef048d6bba1e4cdfa4cf2c8214132a72, type: 3}
+  m_Name: Elemental
+  m_EditorClassIdentifier: 
+  <QuestName>k__BackingField: Elemental
+  <RequiredItems>k__BackingField:
+    <Item>k__BackingField: {fileID: 11400000, guid: 17ff514b006f1bc4fb619ee7acd040f8, type: 2}
+    <Quantity>k__BackingField: 2
+  <MachineToUnlock>k__BackingField: {fileID: 11400000, guid: 2150662d9601de0489585b8f742a3a72, type: 2}

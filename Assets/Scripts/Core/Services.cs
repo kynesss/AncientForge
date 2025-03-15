@@ -1,5 +1,6 @@
 using System;
 using InventorySystem;
+using QuestSystem;
 using UnityEngine;
 
 namespace Core
@@ -8,6 +9,9 @@ namespace Core
     {
         private static Inventory _inventory;
         public static Inventory Inventory => _inventory ??= FindOrThrow<Inventory>();
+        
+        private static QuestManager _questManager;
+        public static QuestManager QuestManager => _questManager ??= FindOrThrow<QuestManager>();
         
         private static T FindOrThrow<T>() where T : MonoBehaviour, IService
         {

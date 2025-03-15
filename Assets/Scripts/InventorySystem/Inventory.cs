@@ -41,10 +41,10 @@ namespace InventorySystem
             
             InventoryChanged?.Invoke();
         }
-
-        public bool HasItem(ItemData item)
+        
+        public int GetItemQuantity(ItemData item)
         {
-            return Items.Any(x => x.Item == item);
+            return Items.Count(x => x.Item == item);
         }
     }
 }

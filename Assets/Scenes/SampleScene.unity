@@ -579,17 +579,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &681584690 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 206234506701096901, guid: 8a234f6e3f56ff241b60b3ac12512618, type: 3}
-  m_PrefabInstance: {fileID: 1854191325450423344}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0119c8b72298e754b90f1f4ac2b280ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &939458833
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +724,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Data>k__BackingField: {fileID: 11400000, guid: e26773639464ef64cb14dbc4597c5761, type: 2}
-  inventory: {fileID: 681584690}
 --- !u!114 &962542382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,6 +821,53 @@ MonoBehaviour:
   button: {fileID: 962542384}
   machine: {fileID: 962542381}
   machineForgeUI: {fileID: 7253203685169656208}
+--- !u!1 &1012221698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012221699}
+  - component: {fileID: 1012221700}
+  m_Layer: 0
+  m_Name: Quest Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012221699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012221698}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1012221700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012221698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52bd6118212422d40b4ebb41bb40b24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questDatas:
+  - {fileID: 11400000, guid: bdf9edc2a18a41c48926a4b6989281e8, type: 2}
+  - {fileID: 11400000, guid: 25d25199348e8724db3639bc4d92e690, type: 2}
 --- !u!1 &1145010923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,10 +1249,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6016211704648209108, guid: 950f1f50a1aedd248b4bae6ab47a9419, type: 3}
-      propertyPath: inventory
-      value: 
-      objectReference: {fileID: 681584690}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2550,7 +2581,6 @@ MonoBehaviour:
   nextButton: {fileID: 701188967781505428}
   exitButton: {fileID: 2910971804280951963}
   machineTitle: {fileID: 5326311272957762298}
-  inventory: {fileID: 681584690}
 --- !u!1 &7339052523983199470
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,3 +2795,4 @@ SceneRoots:
   - {fileID: 358608696372435545}
   - {fileID: 1210490461}
   - {fileID: 581915781}
+  - {fileID: 1012221699}
