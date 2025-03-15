@@ -47,5 +47,10 @@ namespace InventorySystem
             var slot = Items.FirstOrDefault(x => x.Item == item);
             return slot?.Quantity ?? 0;
         }
+
+        public bool HasItem(ItemData item)
+        {
+            return Items.Any(x => x.Item);
+        }
     }
 }

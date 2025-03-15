@@ -1,4 +1,5 @@
 using System;
+using Bonuses;
 using InventorySystem;
 using QuestSystem;
 using UnityEngine;
@@ -12,6 +13,9 @@ namespace Core
         
         private static QuestManager _questManager;
         public static QuestManager QuestManager => _questManager ??= FindOrThrow<QuestManager>();
+        
+        private static BonusTracker _bonus;
+        public static BonusTracker Bonus => _bonus ??= FindOrThrow<BonusTracker>();
         
         private static T FindOrThrow<T>() where T : MonoBehaviour, IService
         {

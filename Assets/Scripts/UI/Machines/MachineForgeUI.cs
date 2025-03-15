@@ -152,7 +152,7 @@ namespace UI.Machines
                 slot.ClearSlot();
             }
             
-            progressBar.ShowProgress(_currentMachine.Data.ProcessTime);
+            progressBar.ShowProgress(_currentMachine.ProcessTime);
             await _currentMachine.StartProcessing(_currentRecipe);
             progressBar.FinishProgress();
         }
