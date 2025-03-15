@@ -14,9 +14,11 @@ namespace UI.Inventory
 
         private Transform _initialParent;
         private int _initialSiblingIndex;
+        public ItemData Item { get; private set; }
         
         public void SetItem(InventorySlot slot)
         {
+            Item = slot.Item;
             itemIcon.sprite = slot.Item.Icon;
             quantityText.text = slot.Quantity > 1 ? $"{slot.Quantity}" : "";
         }
