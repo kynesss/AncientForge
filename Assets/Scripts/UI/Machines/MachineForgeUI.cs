@@ -10,10 +10,11 @@ namespace UI.Machines
 {
     public class MachineForgeUI : MonoBehaviour
     {
-        [SerializeField] private Transform slotContainer; 
-        [SerializeField] private MachineSlotUI slotPrefab; 
-        [SerializeField] private Image outputPreview; 
-        
+        [SerializeField] private Transform slotContainer;
+        [SerializeField] private Image outputPreview;
+        [SerializeField] private MachineSlotUI slotPrefab;
+        [SerializeField] private MachineProgressBarUI progressBar;
+
         [SerializeField] private Button forgeButton;
         [SerializeField] private Button previousButton;
         [SerializeField] private Button nextButton;
@@ -48,6 +49,9 @@ namespace UI.Machines
 
         public void Open(Machine machine)
         {
+            if (_currentMachine.IsProcessing)
+                return;
+            
             slotContainer.DestroyAllChildren();
             
             _currentMachine = machine;
@@ -104,6 +108,7 @@ namespace UI.Machines
                 slot.OnItemChanged -= MachineSlot_OnItemChanged;
                 Destroy(slot.gameObject);
             }
+            
             _activeSlots.Clear();
         }
 
@@ -141,9 +146,16 @@ namespace UI.Machines
             gameObject.SetActive(false);
         }
 
-        private void ForgeButton_OnClick()
+        private async void ForgeButton_OnClick()
         {
-            _currentMachine.StartProcessing(_currentRecipe).Forget();
+            foreach (var slot in _activeSlots)
+            {
+                slot.ClearSlot();
+            }
+            
+            progressBar.ShowProgress(_currentMachine.Data.ProcessTime);
+            await _currentMachine.StartProcessing(_currentRecipe);
+            progressBar.FinishProgress();
         }
     }
 }

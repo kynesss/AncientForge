@@ -14,5 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Smelter
   <Description>k__BackingField: 
-  <Type>k__BackingField: 0
   <Icon>k__BackingField: {fileID: 3881324236535122659, guid: fa3f3dd243fb97048827045390848b62, type: 3}
+  <ProcessTime>k__BackingField: 3
+  <SuccessChance>k__BackingField: 1
+  <Recipes>k__BackingField:
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 0f6c731d0f4ef9f4fbec76998d9c03b1, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: 6d800434b8ce20544be1b5786515e95c, type: 2}
+  - <InputItems>k__BackingField:
+    - {fileID: 11400000, guid: 256831849190b5748bf29a5c21e43397, type: 2}
+    <OutputItem>k__BackingField: {fileID: 11400000, guid: b66189eac47444549ae6b39fa408bc5a, type: 2}

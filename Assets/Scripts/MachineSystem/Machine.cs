@@ -9,32 +9,32 @@ namespace MachineSystem
 {
     public class Machine : MonoBehaviour
     {
-        [SerializeField] private MachineData data;
+        [field: SerializeField] public MachineData Data { get; private set; }
+        
         [SerializeField] private Inventory inventory;
-
-        private bool _isProcessing;
+        public bool IsProcessing { get; private set; }
 
         public string GetMachineName()
         {
-            return data.Name;
+            return Data.Name;
         }
 
         public List<MachineRecipe> GetRecipes()
         {
-            return data.Recipes;
+            return Data.Recipes;
         }
 
         public async UniTask StartProcessing(MachineRecipe recipe)
         {
-            if (_isProcessing) 
+            if (IsProcessing) 
                 return;
             
-            _isProcessing = true;
+            IsProcessing = true;
 
-            Debug.Log($"{data.Name} started processing {recipe.OutputItem.Name}...");
-            await UniTask.Delay(TimeSpan.FromSeconds(data.ProcessTime));
+            Debug.Log($"{Data.Name} started processing {recipe.OutputItem.Name}...");
+            await UniTask.Delay(TimeSpan.FromSeconds(Data.ProcessTime));
 
-            var success = Random.value <= data.SuccessChance;
+            var success = Random.value <= Data.SuccessChance;
             
             if (success)
             {
@@ -46,7 +46,7 @@ namespace MachineSystem
                 Debug.Log($"Processing failed. Ingredients lost.");
             }
 
-            _isProcessing = false;
+            IsProcessing = false;
         }
     }
 }
