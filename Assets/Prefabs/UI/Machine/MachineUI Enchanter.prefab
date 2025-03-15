@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 1158564019133569329, guid: bbec10fa6921e9b428ab73872d4ada50, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5172172915061536397, guid: a3313eba3eb05dd498969c4861d1c680, type: 3}
+      objectReference: {fileID: 1763963168843240256, guid: b13a179f807e82f4da0d9e0015c81905, type: 3}
     - target: {fileID: 2502774925150902177, guid: bbec10fa6921e9b428ab73872d4ada50, type: 3}
       propertyPath: m_Name
       value: MachineUI Enchanter
