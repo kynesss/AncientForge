@@ -1,4 +1,4 @@
-using System;
+using Core;
 using UnityEngine;
 using Utils;
 
@@ -6,7 +6,6 @@ namespace UI.Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
-        [SerializeField] private InventorySystem.Inventory inventory;
         [SerializeField] private InventorySlotUI slotPrefab;
         [SerializeField] private Transform grid;
 
@@ -17,19 +16,19 @@ namespace UI.Inventory
 
         private void OnEnable()
         {
-            inventory.InventoryChanged += OnInventoryChanged;
+            Services.Inventory.InventoryChanged += OnInventoryChanged;
         }
 
         private void OnDisable()
         {
-            inventory.InventoryChanged -= OnInventoryChanged;
+            Services.Inventory.InventoryChanged -= OnInventoryChanged;
         }
 
         private void UpdateUI()
         {
             grid.DestroyAllChildren();
             
-            foreach (var inventorySlot in inventory.Items)
+            foreach (var inventorySlot in Services.Inventory.Items)
             {
                 var slotEntry = Instantiate(slotPrefab, grid);
                 slotEntry.SetItem(inventorySlot);
