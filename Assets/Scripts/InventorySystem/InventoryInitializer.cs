@@ -25,8 +25,11 @@ namespace InventorySystem
             foreach (var startItem in startItems)
             {
                 var quantity = Random.Range(startItem.MinQuantity, startItem.MaxQuantity + 1);
-                inventory.AddItem(startItem.Item, quantity);
+
+                if (quantity == 0)
+                    continue;
                 
+                inventory.AddItem(startItem.Item, quantity);
                 Debug.Log($"Added {quantity}x {startItem.Item.Name} to inventory");
             }
         }
