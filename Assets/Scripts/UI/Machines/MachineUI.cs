@@ -24,5 +24,15 @@ namespace UI.Machines
         {
             machineForgeUI.Open(machine);
         }
+
+        public void Block()
+        {
+            button.interactable = false;
+        }
+        
+        public void TryUnlock(MachineData data)
+        {
+            button.interactable = data == machine.Data;
+        }
     }
 }
